@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Huellitas - Clínica Veterinaria</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-primary": "#7ed4dd",
+                      "surface": "#fbf9f8",
+                      "on-primary-container": "#f5feff",
+                      "secondary-container": "#ff9742",
+                      "on-primary-fixed-variant": "#004f55",
+                      "secondary-fixed": "#ffdcc5",
+                      "background": "#fbf9f8",
+                      "tertiary-container": "#6a7775",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#bdc9ca",
+                      "primary-fixed-dim": "#7ed4dd",
+                      "tertiary-fixed": "#d7e5e2",
+                      "error": "#ba1a1a",
+                      "secondary-fixed-dim": "#ffb783",
+                      "on-background": "#1b1c1c",
+                      "on-tertiary-container": "#f3fffc",
+                      "primary-container": "#1d8089",
+                      "error-container": "#ffdad6",
+                      "on-secondary-container": "#6c3400",
+                      "on-secondary": "#ffffff",
+                      "outline": "#6e797a",
+                      "secondary": "#944a00",
+                      "on-surface": "#1b1c1c",
+                      "tertiary-fixed-dim": "#bcc9c7",
+                      "tertiary": "#525f5d",
+                      "on-primary-fixed": "#002023",
+                      "on-tertiary-fixed-variant": "#3d4947",
+                      "surface-tint": "#006971",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed-variant": "#713700",
+                      "surface-container": "#efeded",
+                      "primary": "#00666e",
+                      "inverse-on-surface": "#f2f0f0",
+                      "surface-container-high": "#eae8e7",
+                      "on-surface-variant": "#3e494a",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-low": "#f5f3f3",
+                      "surface-bright": "#fbf9f8",
+                      "surface-container-highest": "#e4e2e2",
+                      "on-tertiary-fixed": "#121e1c",
+                      "on-secondary-fixed": "#301400",
+                      "inverse-surface": "#303030",
+                      "primary-fixed": "#9af0fa",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dbd9d9",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e4e2e2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "xs": "4px",
+                      "xl": "80px",
+                      "sm": "12px",
+                      "md": "24px",
+                      "container-max": "1200px",
+                      "lg": "48px"
+              },
+              "fontFamily": {
+                      "headline-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-sm": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "label-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-md": [
+                              "Plus Jakarta Sans"
+                      ]
+              },
+              "fontSize": {
+                      "headline-xl": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom styles for softer ambient shadows */
+        .ambient-shadow {
+            box-shadow: 0 4px 12px -2px rgba(0, 102, 110, 0.1);
+        }
+        .ambient-shadow-hover:hover {
+            box-shadow: 0 8px 24px -4px rgba(0, 102, 110, 0.15);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Ambient background glows -->
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-tertiary-fixed opacity-50 blur-[100px]"></div>
+<div class="absolute bottom-[-10%] left-[-10%] w-[40vw] h-[40vw] rounded-full bg-secondary-fixed opacity-40 blur-[100px]"></div>
+</div>
+<!-- TopAppBar from JSON -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center justify-between px-margin-mobile md:px-lg py-4 max-w-container-max mx-auto">
+<a class="flex items-center gap-xs focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">
+<span class="material-symbols-outlined filled text-primary dark:text-primary-fixed-dim font-headline-md text-headline-md">pets</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-inverse-primary tracking-tight">Huellitas</span>
+</a>
+<div class="hidden md:flex items-center gap-md">
+<!-- Main Nav links omitted per landing page shell logic, prioritizing Canvas. Could add anchor links here. -->
+</div>
+<button class="bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary px-sm py-xs rounded-full font-label-md text-label-md transition-colors active:scale-95 flex items-center gap-xs">
+                Book Now
+            </button>
+</div>
+</header>
+<main class="flex-grow z-10 pt-[80px]"> <!-- pt to account for fixed header -->
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-lg py-xl max-w-container-max mx-auto min-h-[80vh] flex flex-col md:flex-row items-center gap-lg">
+<div class="flex-1 flex flex-col items-start gap-md z-10">
+<div class="inline-flex items-center gap-xs bg-tertiary-fixed text-on-tertiary-fixed-variant px-sm py-xs rounded-full font-label-md text-label-md mb-xs">
+<span class="material-symbols-outlined filled text-[16px]">favorite</span>
+                    Medicina Veterinaria Especializada
+                </div>
+<h1 class="font-headline-xl text-headline-xl text-primary md:text-[56px] md:leading-[64px]">Cuidamos a quienes más quieres</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    En Huellitas, combinamos tecnología médica de vanguardia con un trato cálido y humano. Tu mascota merece la mejor atención en un ambiente que la haga sentir segura.
+                </p>
+<div class="flex flex-wrap items-center gap-sm mt-sm">
+<button class="bg-primary text-on-primary hover:bg-surface-tint px-lg py-sm rounded-full font-label-md text-label-md transition-all active:scale-95 shadow-md flex items-center gap-xs">
+                        Agendar Cita
+                        <span class="material-symbols-outlined">calendar_month</span>
+</button>
+<button class="bg-transparent text-primary border-2 border-outline-variant hover:border-primary hover:bg-surface-container px-lg py-sm rounded-full font-label-md text-label-md transition-all active:scale-95">
+                        Nuestros Servicios
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full relative z-10">
+<div class="relative w-full aspect-square max-w-[500px] mx-auto">
+<!-- Decorative elements behind image -->
+<div class="absolute inset-0 bg-tertiary-fixed rounded-full transform translate-x-4 translate-y-4"></div>
+<div class="absolute top-0 right-0 w-24 h-24 bg-secondary-fixed rounded-full mix-blend-multiply opacity-70 animate-pulse"></div>
+<img class="absolute inset-0 w-full h-full object-cover rounded-3xl rounded-tr-[100px] rounded-bl-[100px] ambient-shadow" data-alt="A highly detailed photograph of a joyful golden retriever dog looking directly at the camera with a relaxed, happy expression. The dog is positioned in a pristine, modern veterinary clinic setting characterized by soft white lighting and clean, minimalist surfaces. The color palette relies on pristine whites, soft greys, and deep teal accents in the background. The mood is serene, professional, and warmly inviting, perfectly capturing the 'calm competence' aesthetic of a high-end medical facility." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFZOeJBZ3kcrJ8e7Avn_XpMoQQlMGK4bBvQtzV71tI-8zhhXtHWLiOVP56rG6BRHys-_JLFLDSVMOQG2Ou85DMOJ1UXmYdbCuanX4K4cSXmOywfuaq8FMdps9gkW07D3-8Ww6KSLb8yqml4CFnKzaCLOi8VZYB6_5HBZ_yyLOgwcMf-OztQrVmACfYJNXR-jdAFlry26WdjI_4Iwmw2mUOaid6jOiEpV_HiGE78oOQ4isc2f36C45JRA"/>
+<!-- Floating stat card -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-sm rounded-xl ambient-shadow flex items-center gap-sm">
+<div class="bg-primary-container text-on-primary-container p-xs rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined filled">verified</span>
+</div>
+<div>
+<p class="font-headline-md text-headline-md text-primary leading-tight">15+</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Años de experiencia</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="bg-surface-container-lowest py-xl px-margin-mobile md:px-lg">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Atención Integral</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                        Diseñamos nuestros servicios para cubrir todas las necesidades de salud y bienestar de tu mascota en un solo lugar.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Service 1: Consultas -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md flex flex-col gap-sm ambient-shadow transition-all duration-300 ambient-shadow-hover md:col-span-2">
+<div class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center mb-xs">
+<span class="material-symbols-outlined filled text-[28px]">stethoscope</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Consultas Médicas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            Evaluaciones exhaustivas preventivas y de diagnóstico. Nuestro equipo de veterinarios utiliza tecnología de punta para asegurar un diagnóstico preciso y un tratamiento efectivo.
+                        </p>
+<a class="inline-flex items-center gap-xs font-label-md text-label-md text-primary hover:text-surface-tint mt-sm" href="#">
+                            Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Service 2: Cirugía -->
+<div class="bg-tertiary text-on-tertiary rounded-xl p-md flex flex-col gap-sm shadow-md transition-transform duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg flex items-center justify-center mb-xs">
+<span class="material-symbols-outlined filled text-[28px]">healing</span>
+</div>
+<h3 class="font-headline-md text-headline-md">Cirugía Especializada</h3>
+<p class="font-body-md text-body-md text-on-tertiary/80 flex-grow">
+                            Quirófanos equipados para procedimientos complejos con monitoreo constante.
+                        </p>
+</div>
+<!-- Service 3: Estética -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md flex flex-col gap-sm ambient-shadow transition-all duration-300 ambient-shadow-hover">
+<div class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-lg flex items-center justify-center mb-xs">
+<span class="material-symbols-outlined filled text-[28px]">content_cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Estética Canina</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">
+                            Baños, cortes de pelo y cuidado dermatológico con productos hipoalergénicos.
+                        </p>
+</div>
+<!-- Service 4: Farmacia -->
+<div class="bg-surface border border-surface-variant rounded-xl p-md flex flex-col gap-sm ambient-shadow transition-all duration-300 ambient-shadow-hover md:col-span-2 relative overflow-hidden">
+<div class="relative z-10 flex flex-col h-full">
+<div class="w-12 h-12 bg-primary-container text-on-primary-container rounded-lg flex items-center justify-center mb-xs">
+<span class="material-symbols-outlined filled text-[28px]">medication</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Farmacia Veterinaria</h3>
+<p class="font-body-md text-body-md text-on-surface-variant w-2/3">
+                                Medicamentos especializados, suplementos y dietas de prescripción disponibles inmediatamente tras tu consulta.
+                            </p>
+</div>
+<!-- Abstract shape in background of card -->
+<div class="absolute right-0 bottom-0 w-32 h-32 bg-primary-fixed opacity-20 rounded-tl-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Asymmetric) -->
+<section class="py-xl px-margin-mobile md:px-lg max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row-reverse items-center gap-lg">
+<div class="flex-1 flex flex-col gap-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Sobre Nosotros</h2>
+<h3 class="font-headline-md text-headline-md text-on-surface">Amor por los animales, rigor en la medicina.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Huellitas nació de la convicción de que las mascotas son parte integral de la familia. Nuestro enfoque "Nurturing Modernist" significa que aplicamos el rigor de un centro médico de alta especialidad, entregado con la calidez y el tacto suave que reduce la ansiedad en pacientes y propietarios.
+                    </p>
+<ul class="flex flex-col gap-sm mt-sm">
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Equipo de especialistas certificados.</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Instalaciones diseñadas para minimizar el estrés (Fear Free).</span>
+</li>
+<li class="flex items-start gap-sm">
+<span class="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Atención de emergencias 24/7.</span>
+</li>
+</ul>
+</div>
+<div class="flex-1 w-full relative">
+<div class="grid grid-cols-2 gap-sm">
+<div class="h-64 rounded-2xl overflow-hidden mt-xl">
+<img class="w-full h-full object-cover" data-alt="A highly detailed photograph of a female veterinarian in a clean, soft-white lab coat gently examining a relaxed tabby cat on a stainless steel examination table. The room features a deep teal accent wall and soft, diffused natural lighting creating a bright, modern aesthetic. The atmosphere conveys trust, calmness, and professional medical competence in a high-end clinic setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT0FzTHaVZwE_TFV5q8qUsCOVqPAbdDoCsdG782T-q69hMgT255kFvyz3XuGP3cCK0hjSRFamdSj-FbdIWdy0Nh0tEKAYS1MYLKQBMPPE-xdx60HCU8-klWwMK6D5v-f7TORyQt6MBd6s0MFwFy0SaAQzfa0Jf6pECDW91DDNRfcNhSgqghntYHHYunRdzfnGub6NrM0q-NCs5ernwMgAzITG8c339o_JJdLo4rnlKaOZ3Drb8m5FbzA"/>
+</div>
+<div class="h-64 rounded-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A highly detailed photograph showing the modern waiting area of a veterinary clinic. The space features minimalist white furniture with soft rounded corners, warm oak wood accents, and subtle deep teal decorative elements. A large window lets in soft white light. The aesthetic is clean, sophisticated, and calming, designed to reduce anxiety for pet owners and their animals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHBwM1vy91joqHfIpba4NZHxv3TX6KbFPl_9Gr5ogZufcVC0VxVd--935EYZ3RcN-IdRPpX2jECU5YM9r-SU7Vpg2PPpPsePlrc4fdMm4yhlVMC56YhRSrbFkrogIQNxgvxLE0ewW3RAgN_Ur_2IyT6sUuh-2QRJGhfmfImavBw8ti8F85Xa_DIYPEeQxrvpT4Sfi4N6hZF7OfmsT4hllKWu1bJuiXcbPRAflADeIbppYjgiGG9E77Pw"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer from JSON -->
+<footer class="w-full bg-surface-container-lowest dark:bg-surface-container-highest border-t border-surface-container-low dark:border-surface-dim mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-lg py-xl max-w-container-max mx-auto">
+<div class="flex flex-col gap-sm col-span-1 md:col-span-2">
+<a class="flex items-center gap-xs focus:outline-none focus:ring-2 focus:ring-primary rounded w-fit" href="#">
+<span class="material-symbols-outlined filled text-primary dark:text-primary-fixed-dim font-headline-md text-headline-md">pets</span>
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">Huellitas</span>
+</a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-2">
+                    Brindando cuidado experto y amoroso a tus mascotas. Tu tranquilidad es nuestra prioridad.
+                </p>
+<div class="flex gap-sm mt-4">
+<!-- Social icons placeholders -->
+<a class="text-on-surface-variant hover:text-primary transition-colors focus:ring-2 focus:ring-primary rounded-full p-1" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors focus:ring-2 focus:ring-primary rounded-full p-1" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Enlaces</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors focus:ring-2 focus:ring-primary rounded w-fit" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors focus:ring-2 focus:ring-primary rounded w-fit" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors focus:ring-2 focus:ring-primary rounded w-fit" href="#">Testimonials</a>
+</div>
+<div class="flex flex-col gap-sm">
+<h4 class="font-label-md text-label-md text-on-surface uppercase tracking-wider mb-2">Legal</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors focus:ring-2 focus:ring-primary rounded w-fit" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors focus:ring-2 focus:ring-primary rounded w-fit" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="px-margin-mobile md:px-lg py-sm max-w-container-max mx-auto border-t border-surface-container-low dark:border-surface-dim">
+<p class="font-body-md text-body-md text-on-surface-variant text-center">
+                © 2024 Huellitas Veterinary Clinic. Nurturing with love.
+            </p>
+</div>
+</footer>
+</body></html>
