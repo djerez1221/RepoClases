@@ -1,0 +1,99 @@
+/*
+Sintaxis CSS
+
+Regla o Rule
+*/
+/*
+selector{
+    propiedad1: valor;
+    propiedad2: valor;
+}
+*/
+@font-face{
+    font-family: Monserrat;
+    src: url(./fuentes/Montserrat-Regular.ttf);
+}
+
+/* Selector universal */
+*{
+   box-sizing: border-box; 
+}
+
+html, body, h1, h2, h3, p{
+    margin:0;
+    padding:0;
+}
+/*
+Selectores de TIPO
+*/
+html{
+    font-family: Monserrat, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    font-family: Monserrat;
+    background-color: rgb(255, 255, 255); /*  #000000 #ffffff */
+}
+
+header{
+    background-color: #ffff00;
+    font-size: 18px;
+}
+
+a{
+    color: #000000;
+    text-decoration: none;
+
+}
+p{
+    font-size: 0.8rem;
+    /* EM */
+}
+/* SELECTORES DE CLASE */
+
+/* .vinculos{
+    color: #222;
+} */
+
+/* --------------- */
+
+
+.encabezado-principal{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ccc;
+    padding:5px;
+}
+
+.encabezado-principal a img{
+  width: 50px;
+}
+.encabezado-principal .vinculos a{
+    color: #222;
+}
+
+/* ----------------- */
+.contenido-principal{
+    background-color: rgb(255, 255, 255);
+    height: 1500PX;
+}
+/* ----------------------*/ 
+.pie-principal{
+    background-color: #ccc;
+}
+
+/* Selector ID */
+/* #contactos{
+    background-color: #ffff00;
+} */
+
+/* Selector Atributo*/
+/*
+[class]{
+
+}
+*/
