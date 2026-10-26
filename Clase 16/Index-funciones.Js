@@ -19,3 +19,7 @@ const numeromasuno = numeros.map((numero)=>{
 console.log(numeromasuno)
 
 // filter
+
+const numerosfiltrados = numeros.filter((numero)=>{
+    return numero < 7 
+})
