@@ -1,48 +1,48 @@
+// import productos from "./productos.js" // -> no nombrada
+import productosMascotas from './productos.js'
+import {filtrarPorTalle,renderizarCatalogo} from './funciones.js'
 
-// import productos from "./productos.js" // --> no nombrada 
-import productos from "./productos.js"
-import { filtrarPorTalle, renderizarCatalogo} from "./funciones.js"
-
-
+// productos.productosMascotas
 const productosEnCarro = []
 
+// Utilizar un objeto disponible para acceder a HTML
+// Referenciamos un elemento del html
 const contenedorProductos = document.getElementById("contenedor-productos")
-const botonEvento = document.getElementById("boton-evento")
-const dialog = document.getElementById("dialogo")
-const ProductosSeleccionados = document.getElementById("Productos-Seleccionados")
+const botonEvento = document.getElementById('boton-evento')
+const dialogo = document.getElementById('dialogo')
+const productosSeleccionados = document.getElementById('productos-seleccionados')
+
+// Asignar datos a productosMascotas
+// const productosMascotas = productos
+
+// Filtramos
+const productosFiltrados = filtrarPorTalle(productosMascotas, 'M')
+
+// Renderizamos
+renderizarCatalogo(contenedorProductos, productosFiltrados)
 
 
-////
-const productosMascotas = productos
 
-
-// renderizamos
-
-renderizarCatalogo(contenedorProductos, productosFiltrados,)
-
-//obtenemos datos
-obtenerDatos("./recursos/datos/productos.json")
-
-//filtramos
-const productosFiltrados = filtrarPorTalle(productosMascotas, "S")
-
-botonEvento.addEventListener("click", (evento) => {
-    //console.log(evento)
-    //dialog.show()
-    dialog.showModal()
+// Eventos
+botonEvento.addEventListener('click', (evento)=>{
+    // console.log(evento)
+    // dialogo.show()
+    dialogo.showModal()
 })
 
-//Aplicar escuchadores a los botones de cada producto
-const botonesProductos = document.querySelectorAll(".boton-agregar-producto")
-//console.log(botonesProductos)
-botonesProductos.forEach((boton) => {
-    //Cuerpo del callback forEach
-    boton.addEventListener("click", (evento) => {
-        //Cuerpo del callback del addEventListener
-       const idProducto = parseInt (boton.dataset.id)
-        console.log("id del producto: ", idProducto)
+// Aplicar escuchadores a los botones de los productos
+const botonesProducto = contenedorProductos.querySelectorAll('.boton-agregar-producto')
+// console.log(botonesProducto)
+
+botonesProducto.forEach((boton)=>{
+    // Cuerpo del callback forEach
+    boton.addEventListener('click', (evento)=>{
+        // Cuerpo del callback (handler) del escuchador
+        const idProducto = parseInt(boton.dataset.id)
+        // console.log(idProducto)
         productosEnCarro.push(idProducto)
-        console.log("Productos en el carro: ", productosEnCarro)
-        ProductosSeleccionados.textContent = productosEnCarro.length
+        console.log(productosEnCarro)
+        productosSeleccionados.textContent = productosEnCarro.length
     })
+
 })

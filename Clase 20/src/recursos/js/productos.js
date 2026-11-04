@@ -1,10 +1,12 @@
-import {url_productos} from "./config.js"
-//async / await
-async function obtenerDatos(url){
-   const repuesta = await fetch(url)
-   const datos = await repuesta.json()
-   return datos
+import { URL_PRODUCTOS } from "./config.js"
+
+// async / await
+async function obtenerDatos(url) {
+    const respuesta = await fetch(url) //<- pedimos un recurso via HTTP -> Response
+    const datos = await respuesta.json() //<----- transforma a un objeto javascript
+    return datos //<-- arreglo
 }
-const datos = await obtenerDatos(url_productos)
-//console.log(datos)
+
+const datos = await obtenerDatos(URL_PRODUCTOS)
+// console.log(datos)
 export default datos
