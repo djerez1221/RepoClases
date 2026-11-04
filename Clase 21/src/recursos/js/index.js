@@ -1,6 +1,39 @@
 // import productos from "./productos.js" // -> no nombrada
-import productosMascotas from './productos.js'
+import { obtenerDatos } from './productos.js'
 import {filtrarPorTalle,renderizarCatalogo} from './funciones.js'
+//import productosMascotas from './productos.js'
+import { URL_PRODUCTOS } from './config.js'
+
+
+console.log("cargado")
+
+//persistencia
+
+// localStorage.setItem ("numero",1)
+// const numero = localStorage.getItem("numero")
+// localStorage.getItem (numero)
+
+
+const numeros = [1,2,3,4]
+// const conviertoACadena = JSON.stringify(numeros)
+const conviertoACadena = "[1,2,3,4]"
+localStorage.setItem ("numeros", conviertoACadena)
+const miNumeros = localStorage.getItem("numeros")
+console.log(typeof miNumeros)
+
+
+
+
+
+const productosMascotas = await obtenerDatos(URL_PRODUCTOS)
+
+
+//Callback
+//obtenerDatos(URL_PRODUCTOS).then(()=>{
+    // va todo lo que dependa de la rsolucion Fetch
+//})
+
+
 
 // productos.productosMascotas
 const productosEnCarro = []
